@@ -11,7 +11,7 @@ export const queue = () => {
     const run = (...args) => { 
         if (!isStop) {
             const cur = list[index];
-            curArgs = [args];
+            curArgs = args;
             typeof cur === 'function' && cur(next, ...args);
         }
     }
